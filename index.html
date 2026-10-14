@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Getting started with the TSP SAP Development Framework: prepare your computer with VS Code, Git, Python and Codex, then start your first development from the TSP-LAC-HR-DEVELOPMENTS template.">
+  <meta name="color-scheme" content="light">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>Getting Started · TSP SAP Framework</title>
+  <link rel="icon" href="favicon.svg?v=1" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css?v=1">
+  <script src="app.js?v=1" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#welcome" aria-label="Getting started home"><img class="brand-logo" src="TSP%20Blue%20-%20PNG.png" alt="TSP — The Silicon Partners" width="1008" height="394"><span class="brand-description">SAP AI-Assisted<br>Development Framework</span></a>
+      <span class="badge">Getting Started</span>
+    </div>
+  </header>
+
+  <details class="mobile-progress" id="mobile-progress">
+    <summary><span class="mobile-progress-part" id="mobile-part">Get ready</span><span class="mobile-progress-step" id="mobile-step">01 Welcome</span><span class="mobile-progress-toggle" aria-hidden="true">Steps</span></summary>
+    <div class="mobile-progress-panel" id="mobile-nav-slot"></div>
+  </details>
+
+  <div class="page-shell">
+    <aside class="sidebar">
+      <nav aria-label="Guide progress" id="guide-nav">
+        <p class="nav-label">GET READY <span>Do this once</span></p>
+        <a href="#welcome" data-step="welcome"><span class="nav-state" aria-hidden="true"></span><span class="nav-num">01</span> Welcome</a>
+        <a href="#workflow" data-step="workflow"><span class="nav-state" aria-hidden="true"></span><span class="nav-num">02</span> How it works</a>
+        <a href="#install" data-step="install"><span class="nav-state" aria-hidden="true"></span><span class="nav-num">03</span> Install your tools</a>
+        <a href="#ready" data-step="ready"><span class="nav-state" aria-hidden="true"></span><span class="nav-num">04</span> Ready check</a>
+        <p class="nav-label">NEW PROJECT <span>Every solution</span></p>
+        <a href="#identity" data-step="identity"><span class="nav-state" aria-hidden="true"></span><span class="nav-num">05</span> Name your solution</a>
+        <a href="#project" data-step="project"><span class="nav-state" aria-hidden="true"></span><span class="nav-num">06</span> Create your project</a>
+        <a href="#start" data-step="start"><span class="nav-state" aria-hidden="true"></span><span class="nav-num">07</span> Start the Framework</a>
+        <a href="#work" data-step="work"><span class="nav-state" aria-hidden="true"></span><span class="nav-num">08</span> Work with Codex</a>
+        <a href="#save" data-step="save"><span class="nav-state" aria-hidden="true"></span><span class="nav-num">09</span> Save your work</a>
+        <p class="nav-label">HELP</p>
+        <a href="#glossary" data-step="glossary"><span class="nav-state" aria-hidden="true"></span><span class="nav-num">A–Z</span> Words to know</a>
+        <a href="#help" data-step="help" class="nav-help"><span class="nav-state" aria-hidden="true"></span><span class="nav-num">?</span> Troubleshooting</a>
+      </nav>
+      <div class="os-switch" role="group" aria-label="Show instructions for">
+        <span class="os-switch-label">Instructions for</span>
+        <button type="button" data-os-choice="win" aria-pressed="true">Windows</button>
+        <button type="button" data-os-choice="mac" aria-pressed="false">macOS</button>
+      </div>
+      <p class="sidebar-note">Your ticks are saved in this browser only.<br>Project progress is tracked by the Framework, not by this page.</p>
+    </aside>
+
+    <main id="main">
+      <!-- ============================== GET READY ============================== -->
+      <section id="welcome" class="hero" aria-labelledby="welcome-title">
+        <p class="eyebrow"><span class="section-number">01</span> WELCOME</p>
+        <h1 id="welcome-title">Your SAP expertise,<br>a new way of working.</h1>
+        <p class="hero-subtitle">You already know how to build SAP integrations. This guide does not teach CPI or ABAP. It shows you how to prepare your computer and how to start a development with the TSP Framework.</p>
+        <ul class="hero-roles" aria-label="The new way of working in four parts">
+          <li><strong>VS Code</strong> is your workspace. All project files are here.</li>
+          <li><strong>Codex</strong> is the AI agent that works with you inside VS Code.</li>
+          <li><strong>GitHub</strong> keeps your project safe, in the <strong>TSP-LAC-HR-DEVELOPMENTS</strong> organization.</li>
+          <li><strong>The TSP Framework</strong> guides every development, step by step.</li>
+        </ul>
+        <p class="hero-support"><strong>You stay responsible for the technical decisions and the approvals.</strong> Codex helps you analyse, design, build, test and document.<br>You do not need experience with VS Code, Git or GitHub. This guide starts from zero.</p>
+
+        <div class="acts" aria-label="The two parts of this guide">
+          <a class="act act-setup" href="#workflow">
+            <span class="act-label">PART A · GET READY</span>
+            <span class="act-title">Prepare your computer</span>
+            <span class="act-text">Install the tools and check that each one works. <strong>You do this only once.</strong> It takes about 30–45 minutes.</span>
+            <span class="act-meta">Steps 01–04</span>
+          </a>
+          <a class="act act-exercise" href="#identity">
+            <span class="act-label">PART B · START A DEVELOPMENT</span>
+            <span class="act-title">Your first Framework project</span>
+            <span class="act-text">Create a project from the TSP template, start the Framework and learn how to work with Codex.</span>
+            <span class="act-meta">Steps 05–09 · repeat for every new solution</span>
+          </a>
+        </div>
+      </section>
+
+      <section id="workflow" class="section" aria-labelledby="workflow-title">
+        <div class="section-heading"><span class="section-number">02</span><h2 id="workflow-title">How it works</h2></div>
+        <p class="lead">The tools work together, and you direct them. Every development follows the same simple cycle.</p>
+
+        <ol class="process-steps">
+          <li><span class="process-who process-who-you">You</span><p><strong>Tell Codex what you want.</strong> At the start: <code>Start a new project.</code> When you are not sure: <code>What should I do next?</code></p></li>
+          <li><span class="process-who">Codex</span><p><strong>Reads the Framework rules and your project files.</strong> The rules are already inside your project (the file <code>AGENTS.md</code>). You do not need to open them.</p></li>
+          <li><span class="process-who">TSP Framework</span><p><strong>Knows where the project is and what the next step is.</strong> You never need to work this out yourself.</p></li>
+          <li><span class="process-who">Codex</span><p><strong>Does that step:</strong> asks questions, proposes a design, writes files and code, runs checks. When it needs more access, it asks you first.</p></li>
+          <li><span class="process-who process-who-you">You</span><p><strong>Review what Codex brings you:</strong> a question, a missing requirement, a technical proposal or an approval request. If you do not agree, say so and ask why.</p></li>
+          <li><span class="process-who process-who-you">You</span><p><strong>Answer, decide or approve,</strong> with your SAP knowledge and the exact words the Framework shows you.</p></li>
+          <li><span class="process-who">TSP Framework</span><p><strong>Records the decision and the evidence</strong> in your project. GitHub keeps the full history.</p></li>
+        </ol>
+        <p class="small-text">The cycle repeats until the Framework shows that the development is complete.</p>
+
+        <div class="process-facts">
+          <p><strong>SAP Integration Suite</strong> stays in your browser, as today. You build and deploy iFlows there. Codex helps you design, write Groovy scripts and mappings, and document them.</p>
+          <p><strong>GitHub</strong> stores your project files and their history. It does <strong>not</strong> replace SAP transports or CPI packages.</p>
+          <p><strong>No real employee data.</strong> Never paste production HR or payroll data into Codex. Use test or fictional data.</p>
+        </div>
+      </section>
+
+      <section id="install" class="section" aria-labelledby="install-title">
+        <div class="section-heading"><span class="section-number">03</span><h2 id="install-title">Install your tools</h2></div>
+        <div class="stage-intro">
+          <div><p class="eyebrow">WHAT YOU DO</p><p>Install five things on your computer, add the Framework's Python packages, and check your GitHub access.</p></div>
+          <div><p class="eyebrow">WHY</p><p>All your Framework work happens inside VS Code, on your computer.</p></div>
+        </div>
+        <div class="os-switch os-switch-inline" role="group" aria-label="Show instructions for">
+          <span class="os-switch-label">Show instructions for</span>
+          <button type="button" data-os-choice="win" aria-pressed="true">Windows</button>
+          <button type="button" data-os-choice="mac" aria-pressed="false">macOS</button>
+        </div>
+
+        <article class="tool-card" id="tool-vscode">
+          <header class="tool-head"><span class="tool-letter">A</span><div><h3>VS Code</h3><p>Your workspace: project files, terminal and Codex in one window.</p></div></header>
+          <ol class="actions">
+            <li>Download VS Code from <a href="https://code.visualstudio.com/download" target="_blank" rel="noopener noreferrer">code.visualstudio.com/download <span aria-hidden="true">↗</span></a>.</li>
+            <li class="os-win">Run the <strong>User Installer</strong>. You do not need administrator rights. Keep the option <strong>Add to PATH</strong> selected.</li>
+            <li class="os-mac">Open the downloaded file and drag <strong>Visual Studio Code</strong> into <strong>Applications</strong>.</li>
+            <li>Open VS Code.</li>
+          </ol>
+          <div class="learn-box">
+            <p class="eyebrow">TWO SHORTCUTS TO LEARN</p>
+            <p><strong>Command Palette</strong> is the search box for every VS Code command. Open it, type part of the command name, press Enter.</p>
+            <dl class="shortcut-list"><div><dt>Command Palette</dt><dd><kbd class="os-win">Ctrl+Shift+P</kbd><kbd class="os-mac">Cmd+Shift+P</kbd></dd></div><div><dt>Extensions</dt><dd><kbd class="os-win">Ctrl+Shift+X</kbd><kbd class="os-mac">Cmd+Shift+X</kbd></dd></div></dl>
+            <p class="small-text"><strong>Extensions</strong> are add-ons for VS Code. You install them from the Extensions view: search the name, then click <strong>Install</strong>.</p>
+          </div>
+          <ol class="actions">
+            <li>Open the Extensions view and install <strong>Python</strong> by <strong>Microsoft</strong>. The Framework uses it to show the project dashboard.</li>
+          </ol>
+          <p class="os-mac small-text">macOS only: open Command Palette and run <strong>Shell Command: Install 'code' command in PATH</strong>.</p>
+          <p class="expect"><span>Expected result</span> VS Code opens with a Welcome tab, and the Python extension shows as installed.</p>
+        </article>
+
+        <article class="tool-card" id="tool-git">
+          <header class="tool-head"><span class="tool-letter">B</span><div><h3>Git</h3><p>Saves every version of your project files. VS Code uses it to send your work to GitHub.</p></div></header>
+          <ol class="actions">
+            <li class="os-win">Install <strong>Git for Windows</strong> from <a href="https://git-scm.com/install/windows" target="_blank" rel="noopener noreferrer">git-scm.com/install/windows <span aria-hidden="true">↗</span></a>. Keep all default options. They include the GitHub sign-in helper.</li>
+            <li class="os-mac">Open <strong>Terminal</strong> and run <code>xcode-select --install</code>. Or follow <a href="https://git-scm.com/install/mac" target="_blank" rel="noopener noreferrer">git-scm.com/install/mac <span aria-hidden="true">↗</span></a>.</li>
+            <li>Close and open VS Code again, so it finds Git.</li>
+          </ol>
+          <p class="small-text">Tell Git your name and TSP email (once). In the VS Code terminal, run the two lines below with your own data:</p>
+          <div class="code-block"><pre><code id="git-identity">git config --global user.name "Your Name"
+git config --global user.email "you@tsp.tech"</code></pre><button type="button" class="copy-button" data-copy="git-identity" aria-label="Copy Git identity commands">Copy</button></div>
+        </article>
+
+        <article class="tool-card" id="tool-python">
+          <header class="tool-head"><span class="tool-letter">C</span><div><h3>Python 3.11 or later</h3><p>The Framework's checks and documents are made by small Python programs. Codex runs them for you.</p></div></header>
+          <ol class="actions">
+            <li class="os-win">Install Python from <a href="https://www.python.org/downloads/" target="_blank" rel="noopener noreferrer">python.org/downloads <span aria-hidden="true">↗</span></a> with the <strong>Python Install Manager</strong>. If it asks to add Python to PATH, say yes.</li>
+            <li class="os-mac">Install the macOS package from <a href="https://www.python.org/downloads/" target="_blank" rel="noopener noreferrer">python.org/downloads <span aria-hidden="true">↗</span></a>.</li>
+            <li>Choose the newest 3.x version. The minimum is Python 3.11.</li>
+          </ol>
+        </article>
+
+        <div class="verify-card">
+          <p class="eyebrow">CHECK GIT AND PYTHON</p>
+          <p>In VS Code, open the menu <strong>Terminal → New Terminal</strong>. A text window opens at the bottom. Paste these lines and press Enter:</p>
+          <div class="code-block os-win"><pre><code id="check-win">git --version
+python --version</code></pre><button type="button" class="copy-button" data-copy="check-win" aria-label="Copy Windows version check commands">Copy</button></div>
+          <div class="code-block os-mac"><pre><code id="check-mac">git --version
+python3 --version</code></pre><button type="button" class="copy-button" data-copy="check-mac" aria-label="Copy macOS version check commands">Copy</button></div>
+          <p class="expect"><span>Expected result</span> Two lines with version numbers, for example <code>git version 2.x</code> and <code>Python 3.1x.x</code>.</p>
+          <details class="trouble"><summary>If it does not work</summary><ul><li><strong>"not recognized" or "command not found":</strong> close all VS Code windows, open VS Code again and retry. Installers only update new windows.</li><li class="os-win"><strong>The Microsoft Store opens when you type <code>python</code>:</strong> finish the Python Install Manager setup from python.org, then open VS Code again.</li><li><strong>Python is older than 3.11:</strong> install a newer version.</li></ul></details>
+        </div>
+
+        <div class="verify-card" id="python-packages">
+          <p class="eyebrow">INSTALL THE FRAMEWORK'S PYTHON PACKAGES</p>
+          <p>In the same terminal, run this once. These are the packages listed in the Framework's <code>requirements.txt</code>.</p>
+          <div class="code-block os-win"><pre><code id="pip-win">python -m pip install "PyYAML&gt;=6.0,&lt;7" "openpyxl&gt;=3.1,&lt;4" "python-docx&gt;=1.2,&lt;2"</code></pre><button type="button" class="copy-button" data-copy="pip-win" aria-label="Copy Windows package install command">Copy</button></div>
+          <div class="code-block os-mac"><pre><code id="pip-mac">python3 -m pip install "PyYAML&gt;=6.0,&lt;7" "openpyxl&gt;=3.1,&lt;4" "python-docx&gt;=1.2,&lt;2"</code></pre><button type="button" class="copy-button" data-copy="pip-mac" aria-label="Copy macOS package install command">Copy</button></div>
+          <p class="expect"><span>Expected result</span> The last line says <code>Successfully installed …</code> or <code>Requirement already satisfied</code>.</p>
+          <details class="trouble"><summary>If it does not work</summary><ul><li><strong>"No module named pip":</strong> your Python installation is not complete. Install Python again from python.org.</li><li class="os-mac"><strong>"externally-managed-environment":</strong> this Python came from Homebrew. Install Python from python.org and use that one.</li></ul></details>
+        </div>
+
+        <article class="tool-card tool-card-claude" id="tool-codex">
+          <header class="tool-head"><span class="tool-letter">D</span><div><h3>Codex</h3><p>The AI agent you work with inside VS Code. It is the official AI for the TSP Framework.</p></div></header>
+          <ol class="actions">
+            <li>Open the Extensions view (<kbd class="os-win">Ctrl+Shift+X</kbd><kbd class="os-mac">Cmd+Shift+X</kbd>), search <strong>Codex</strong> and install <strong>Codex – OpenAI's coding agent</strong> by <strong>OpenAI</strong>. Check the publisher: it must be OpenAI.</li>
+            <li>Click the <strong>Codex</strong> icon in the left bar to open the Codex panel. If you do not see it, open Command Palette and run <strong>Codex: Open Codex Sidebar</strong>.</li>
+            <li>Click <strong>Sign in with ChatGPT</strong> and finish the sign-in in your browser. Use the ChatGPT account that TSP gave you.</li>
+            <li>Below the message box, check the mode. Use <strong>Agent</strong>. In Agent mode Codex can read and change files inside your project, and it asks you before it does more. <strong>Do not use "Agent (full access)".</strong></li>
+          </ol>
+          <p class="expect"><span>Expected result</span> A chat panel with a message box. Type <code>hello</code> and Codex answers.</p>
+          <details class="trouble"><summary>If it does not work</summary><ul><li><strong>No Codex icon after install:</strong> Command Palette → <strong>Developer: Reload Window</strong>.</li><li><strong>Sign-in fails or says you have no access:</strong> your ChatGPT account needs a plan that includes Codex. Ask your TSP lead for access.</li><li class="os-win"><strong>Codex cannot run commands on Windows:</strong> update VS Code and the Codex extension to the latest version, then reload the window. If it still fails, contact the HCM Technology team.</li></ul></details>
+        </article>
+
+        <article class="tool-card" id="tool-github">
+          <header class="tool-head"><span class="tool-letter">E</span><div><h3>GitHub access</h3><p>Your projects live in the <strong>TSP-LAC-HR-DEVELOPMENTS</strong> GitHub organization.</p></div></header>
+          <ol class="actions">
+            <li>Sign in to <a href="https://github.com/" target="_blank" rel="noopener noreferrer">github.com <span aria-hidden="true">↗</span></a>. If you do not have an account, create one with your TSP email.</li>
+            <li>Send your GitHub username to the HCM Technology team and ask to join the organization. Accept the invitation email.</li>
+            <li>Open the <a href="https://github.com/TSP-LAC-HR-DEVELOPMENTS/tsp-sap-development-template" target="_blank" rel="noopener noreferrer">TSP development template <span aria-hidden="true">↗</span></a>.</li>
+          </ol>
+          <p class="expect"><span>Expected result</span> You see the template and a green <strong>Use this template</strong> button. If GitHub shows "404", you do not have access yet. Check that you accepted the invitation.</p>
+        </article>
+
+        <fieldset class="section-checks" data-section-checks="install">
+          <legend>Tick what is done</legend>
+          <label><input type="checkbox" data-setup="vscode"> VS Code and Python extension installed</label>
+          <label><input type="checkbox" data-setup="git"> Git works</label>
+          <label><input type="checkbox" data-setup="python"> Python 3.11+ works</label>
+          <label><input type="checkbox" data-setup="pydeps"> Framework Python packages installed</label>
+          <label><input type="checkbox" data-setup="codex"> Codex signed in, Agent mode</label>
+          <label><input type="checkbox" data-setup="github"> I can open the template on GitHub</label>
+        </fieldset>
+      </section>
+
+      <section id="ready" class="section ready-section" aria-labelledby="ready-title">
+        <div class="section-heading"><span class="section-number">04</span><h2 id="ready-title">Your computer is ready</h2></div>
+        <p>Tick everything that is true. If something is not ticked, finish it first, or ask the HCM Technology team.</p>
+        <fieldset class="ready-list" data-section-checks="ready">
+          <legend class="visually-hidden">Ready check</legend>
+          <label><input type="checkbox" data-setup="vscode"> VS Code and Python extension installed</label>
+          <label><input type="checkbox" data-setup="git"> Git works</label>
+          <label><input type="checkbox" data-setup="python"> Python 3.11+ works</label>
+          <label><input type="checkbox" data-setup="pydeps"> Framework Python packages installed</label>
+          <label><input type="checkbox" data-setup="codex"> Codex signed in, Agent mode</label>
+          <label><input type="checkbox" data-setup="github"> I can open the template on GitHub</label>
+        </fieldset>
+        <p class="ready-status" id="ready-status" aria-live="polite"></p>
+        <div class="ready-cta">
+          <a class="button button-primary button-large" href="#identity">Start your first development <span aria-hidden="true">→</span></a>
+          <p class="small-text">You do not need to repeat Part A for the next projects.</p>
+          <button type="button" class="link-button" id="reset-setup">Clear ticks</button>
+        </div>
+      </section>
+
+      <!-- ============================== START A DEVELOPMENT ============================== -->
+      <div class="part-band" role="presentation">
+        <img src="TSP%20White%20-%20PNG.png" alt="" width="1008" height="394">
+        <div><p class="part-band-label">PART B · START A DEVELOPMENT</p><p class="part-band-title">From requirement to SAP solution</p></div>
+      </div>
+
+      <section id="identity" class="section" aria-labelledby="identity-title">
+        <div class="section-heading"><span class="section-number">05</span><h2 id="identity-title">Name your solution</h2></div>
+        <div class="stage-intro">
+          <div><p class="eyebrow">WHAT YOU DO</p><p>Build the repository name for your solution.</p></div>
+          <div><p class="eyebrow">WHY</p><p>Every TSP solution has a <strong>Client</strong> and a <strong>Solution ID</strong>. The Framework checks the repository name, so it must be correct from the start.</p></div>
+        </div>
+
+        <div class="identity-card">
+          <p class="eyebrow">YOUR SOLUTION IDENTITY</p>
+          <p>Fill in the three fields. Use the client's short code and the Solution ID or Integration ID from your project. Nothing you type here leaves this page.</p>
+          <div class="identity-fields">
+            <div><label class="input-label" for="client-input">Client short code</label><input id="client-input" type="text" autocomplete="off" spellcheck="false" placeholder="e.g. RWE"></div>
+            <div><label class="input-label" for="solution-input">Solution ID</label><input id="solution-input" type="text" autocomplete="off" spellcheck="false" placeholder="e.g. INT-018"></div>
+            <div class="identity-wide"><label class="input-label" for="name-input">Short solution name</label><input id="name-input" type="text" autocomplete="off" spellcheck="false" placeholder="e.g. W4 Tax Form Replication"></div>
+          </div>
+          <p class="split-label">Your repository name</p>
+          <div class="code-block repo-name-block"><pre><code id="repo-name">&lt;CLIENT&gt;_&lt;SOLUTION-ID&gt;_&lt;SHORT-DESCRIPTION&gt;</code></pre><button type="button" class="copy-button" data-copy="repo-name" aria-label="Copy repository name">Copy</button></div>
+          <p class="small-text" id="repo-name-status" aria-live="polite">Example: <code>RWE_INT-018_W4-Tax-Form-Replication</code></p>
+          <ul class="mini-facts">
+            <li>Client and Solution ID: letters, numbers, dots, <code>_</code> or <code>-</code>. No spaces.</li>
+            <li>The name keeps your upper and lower case. Spaces become <code>-</code>.</li>
+            <li>Not sure about the Solution ID? Ask your project manager before you create the repository.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="project" class="section" aria-labelledby="project-title">
+        <div class="section-heading"><span class="section-number">06</span><h2 id="project-title">Create your project</h2></div>
+        <div class="stage-intro">
+          <div><p class="eyebrow">WHAT YOU DO</p><p>Create a new repository from the TSP template, and open it in VS Code.</p></div>
+          <div><p class="eyebrow">WHY</p><p>The repository holds everything the Framework produces: specifications, design, code, tests, evidence and approvals.</p></div>
+        </div>
+
+        <ol class="steps">
+          <li>
+            <h3>Create the repository from the template</h3>
+            <p>Open the template and click <strong>Use this template → Create a new repository</strong>.</p>
+            <a class="button button-primary" href="https://github.com/TSP-LAC-HR-DEVELOPMENTS/tsp-sap-development-template" target="_blank" rel="noopener noreferrer">Open the TSP template <span aria-hidden="true">↗</span></a>
+            <dl class="facts facts-compact">
+              <div><dt>Owner</dt><dd><code>TSP-LAC-HR-DEVELOPMENTS</code> (not your personal account)</dd></div>
+              <div><dt>Repository name</dt><dd>Your repository name from step 05</dd></div>
+              <div><dt>Visibility</dt><dd><strong>Private</strong></dd></div>
+            </dl>
+            <p>Click <strong>Create repository</strong>.</p>
+          </li>
+          <li>
+            <h3>Clone it and open it in VS Code</h3>
+            <p><strong>Clone</strong> means: make a copy of the repository on your computer.</p>
+            <p>In VS Code, open Command Palette → <strong>Git: Clone</strong> → <strong>Clone from GitHub</strong>. Sign in to GitHub if VS Code asks. Choose your new repository, choose a folder on your computer (for example <code>Documents/TSP-Projects</code>) and click <strong>Open</strong>.</p>
+            <p>VS Code asks if you trust the authors of the folder. Choose <strong>Yes, I trust the authors</strong>.</p>
+            <details class="optional"><summary>Prefer the terminal?</summary><p>On GitHub, click <strong>Code</strong> and copy the HTTPS address. Then run:</p><div class="code-block"><pre><code id="clone-commands">git clone &lt;your-repository-address&gt;
+cd &lt;your-repository-name&gt;
+code .</code></pre><button type="button" class="copy-button" data-copy="clone-commands" aria-label="Copy clone and open commands">Copy</button></div></details>
+            <p class="expect"><span>Expected result</span> On the left, VS Code shows your project files, including <code>START-HERE.md</code> and <code>AGENTS.md</code>.</p>
+            <p class="small-text">VS Code may ask to allow automatic tasks in this folder. These tasks open the Framework dashboard in your browser. You can allow them.</p>
+          </li>
+        </ol>
+        <details class="trouble trouble-standalone"><summary>Cannot clone or sign in to GitHub?</summary><ul><li><strong>Your repository is not in the list:</strong> check that you created it under <code>TSP-LAC-HR-DEVELOPMENTS</code>, and that you are signed in with the right GitHub account.</li><li class="os-win"><strong>The sign-in window keeps coming back:</strong> the Git sign-in helper opens a browser window. Finish the sign-in there.</li><li class="os-mac"><strong>Sign-in fails in Terminal:</strong> use <strong>Git: Clone → Clone from GitHub</strong> in VS Code. It signs you in through the browser.</li></ul></details>
+      </section>
+
+      <section id="start" class="section start-section" aria-labelledby="start-title">
+        <div class="section-heading"><span class="section-number">07</span><h2 id="start-title">Start the Framework</h2></div>
+        <p>In the VS Code window with <strong>your project</strong>, open the Codex panel. Check that the mode is <strong>Agent</strong>.</p>
+        <p>Send Codex only this message:</p>
+        <div class="prompt-card main-prompt"><code id="start-prompt">Start a new project.</code><button type="button" class="button button-primary" data-copy="start-prompt">Copy</button></div>
+        <p class="start-handover"><strong>From here, the Framework guides you.</strong> You do not need to know which step comes next, which files to open or what to edit.</p>
+        <p>When you are not sure what to do, ask Codex:</p>
+        <div class="prompt-card"><code id="next-prompt">What should I do next?</code><button type="button" class="copy-button" data-copy="next-prompt" aria-label="Copy next action prompt">Copy</button></div>
+        <p class="small-text">You can also open <code>START-HERE.md</code> at any time. Its section <strong>Your Next Action</strong> always shows who must do what.</p>
+
+        <div class="known-facts">
+          <p class="eyebrow">HAVE THIS INFORMATION READY</p>
+          <p>Codex will ask a few questions to set up the project. Prepare the answers before you start.</p>
+          <dl class="facts">
+            <div><dt>Client</dt><dd>The short code from step 05</dd></div>
+            <div><dt>Solution ID</dt><dd>Exactly as in your repository name</dd></div>
+            <div><dt>Solution name</dt><dd>The short solution name from step 05</dd></div>
+            <div><dt>Project roles</dt><dd>Who is the Functional Owner and who is the Technical Lead</dd></div>
+            <div><dt>SAP systems</dt><dd>Which SAP and Integration Suite tenants the solution uses (development, QA, production)</dd></div>
+            <div><dt>Functional Specification</dt><dd>The document from the functional consultant. Codex will ask you for it.</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section id="work" class="section" aria-labelledby="work-title">
+        <div class="section-heading"><span class="section-number">08</span><h2 id="work-title">Work with Codex</h2></div>
+        <div class="judgment">
+          <p class="judgment-title">Codex does not replace your engineering judgment.</p>
+          <div class="judgment-split"><p><span>Codex</span>proposes · investigates · executes</p><p><span>You</span>review · decide · approve</p></div>
+        </div>
+        <p>You will see four kinds of moments:</p>
+        <div class="moment-grid">
+          <article class="moment"><p class="eyebrow">A · CODEX ASKS FOR INFORMATION</p><blockquote>“Who is the Technical Lead?”</blockquote><p><strong>Answer what you know.</strong> If you do not know, say so. Do not guess.</p></article>
+          <article class="moment"><p class="eyebrow">B · CODEX FINDS A FUNCTIONAL GAP</p><blockquote>“The specification does not define … Please confirm.”</blockquote><p>This is a <strong>business question</strong>. Take it to the Functional Owner. Give Codex the answer you receive.</p></article>
+          <article class="moment"><p class="eyebrow">C · A TECHNICAL DECISION</p><blockquote>“I recommend an iFlow with … because …”</blockquote><p><strong>Use your SAP integration experience.</strong> Read the proposal, ask why, compare other options. Do not accept it without thinking.</p><p class="small-text">If Codex asks you a technical question as if it was a business requirement, you can reply:</p><div class="prompt-card stacked-prompt"><code id="technical-prompt">This is a technical design decision. Please evaluate it through the framework and recommend the appropriate solution.</code><button type="button" class="copy-button" data-copy="technical-prompt" aria-label="Copy technical design response">Copy response</button></div></article>
+          <article class="moment"><p class="eyebrow">D · CODEX ASKS FOR APPROVAL</p><blockquote>“If this is correct, reply: …”</blockquote><p><strong>Read exactly what you approve.</strong> Approve only if you agree. Use the exact words the Framework shows you.</p></article>
+        </div>
+
+        <div class="safety-card" id="permissions">
+          <p class="eyebrow">PERMISSIONS AND SAFETY</p>
+          <ul>
+            <li><strong>Use Agent mode.</strong> Codex can change files in your project. It asks you before it uses the internet or works outside the project folder. Read each request. Allow it only when it makes sense.</li>
+            <li><strong>Do not use "Agent (full access)".</strong> It removes these questions.</li>
+            <li><strong>Never paste passwords, keys or real employee data</strong> into Codex or into project files. Keep credentials in SAP Integration Suite security material.</li>
+            <li>Make changes in SAP only when the Framework says implementation is approved.</li>
+          </ul>
+        </div>
+
+        <h3 class="subhead">Three rules</h3>
+        <div class="rules-grid">
+          <div class="rule-card"><span class="rule-number">01</span><h4>Follow the Framework.</h4><p>Do not open or edit Framework files by hand (<code>.framework</code> folder, <code>START-HERE.md</code>).</p></div>
+          <div class="rule-card"><span class="rule-number">02</span><h4>Ask before you guess.</h4><p>Not sure what comes next? Ask Codex:</p><div class="rule-prompt"><code id="rules-next-prompt">What should I do next?</code><button type="button" class="copy-button" data-copy="rules-next-prompt" aria-label="Copy next action prompt">Copy</button></div></div>
+          <div class="rule-card"><span class="rule-number">03</span><h4>One project, one chat topic.</h4><p>Use Codex in the VS Code window of the project you work on. For a new solution, create a new repository.</p></div>
+        </div>
+
+        <h3 class="subhead">Useful messages</h3>
+        <div class="prompt-list">
+          <div class="prompt-card"><code id="p-where">Where are we in the project?</code><button type="button" class="copy-button" data-copy="p-where" aria-label="Copy message">Copy</button></div>
+          <div class="prompt-card"><code id="p-explain">Explain this step in simple words.</code><button type="button" class="copy-button" data-copy="p-explain" aria-label="Copy message">Copy</button></div>
+          <div class="prompt-card"><code id="p-workbook">Generate the customer workbook.</code><button type="button" class="copy-button" data-copy="p-workbook" aria-label="Copy message">Copy</button></div>
+        </div>
+        <p class="small-text">You can also write to Codex in Spanish or Portuguese. Codex understands. Approval phrases must use the exact words the Framework shows.</p>
+      </section>
+
+      <section id="save" class="section" aria-labelledby="save-title">
+        <div class="section-heading"><span class="section-number">09</span><h2 id="save-title">Save your work to GitHub</h2></div>
+        <p class="lead">Your files are on your computer. To keep them safe and share them with the team, send them to GitHub. Do this at the end of each work session.</p>
+        <ol class="steps">
+          <li>
+            <h3>Open Source Control</h3>
+            <p>Click the <strong>Source Control</strong> icon in the left bar (three circles joined by lines), or press <kbd class="os-win">Ctrl+Shift+G</kbd><kbd class="os-mac">Ctrl+Shift+G</kbd>. You see the list of changed files.</p>
+          </li>
+          <li>
+            <h3>Commit</h3>
+            <p>A <strong>commit</strong> is a saved version with a short message. Type a message that says what you did, for example <code>Technical design approved</code>, and click <strong>Commit</strong>.</p>
+            <p class="small-text">If VS Code asks to stage all changes, choose <strong>Yes</strong>.</p>
+          </li>
+          <li>
+            <h3>Push</h3>
+            <p><strong>Push</strong> sends your commits to GitHub. Click <strong>Sync Changes</strong>.</p>
+            <p class="expect"><span>Expected result</span> On github.com, your repository shows your latest message next to the files.</p>
+          </li>
+        </ol>
+        <p>You can also ask Codex:</p>
+        <div class="prompt-card"><code id="p-commit">Commit and push my changes with a clear message.</code><button type="button" class="copy-button" data-copy="p-commit" aria-label="Copy commit message request">Copy</button></div>
+        <p class="small-text">Codex shows you what it will send. Check that there are no passwords or real data in the list.</p>
+      </section>
+
+      <!-- ============================== HELP ============================== -->
+      <section id="glossary" class="section" aria-labelledby="glossary-title">
+        <div class="section-heading"><span class="section-number">A–Z</span><h2 id="glossary-title">Words to know</h2></div>
+        <dl class="glossary">
+          <div><dt>Repository (repo)</dt><dd>A project folder on GitHub, with the full history of its files.</dd></div>
+          <div><dt>Template</dt><dd>A ready-made repository. You copy it to start a new project with the Framework inside.</dd></div>
+          <div><dt>Organization</dt><dd>A shared space on GitHub for a team. Ours is <code>TSP-LAC-HR-DEVELOPMENTS</code>.</dd></div>
+          <div><dt>Clone</dt><dd>Make a copy of a repository on your computer.</dd></div>
+          <div><dt>Commit</dt><dd>Save a version of your changes, with a short message.</dd></div>
+          <div><dt>Push / Sync</dt><dd>Send your commits from your computer to GitHub.</dd></div>
+          <div><dt>Pull</dt><dd>Get the latest changes from GitHub to your computer.</dd></div>
+          <div><dt>Terminal</dt><dd>A text window where you type commands. In VS Code: <strong>Terminal → New Terminal</strong>.</dd></div>
+          <div><dt>Extension</dt><dd>An add-on for VS Code, for example Codex or Python.</dd></div>
+          <div><dt>Command Palette</dt><dd>The VS Code search box for commands.</dd></div>
+          <div><dt>Prompt / message</dt><dd>What you write to Codex in the chat.</dd></div>
+          <div><dt>AGENTS.md</dt><dd>The file with the Framework rules for Codex. Codex reads it alone. You do not edit it.</dd></div>
+          <div><dt>START-HERE.md</dt><dd>The project status page. It always shows your next action.</dd></div>
+          <div><dt>Approval / gate</dt><dd>A point where a person must confirm before the project moves on.</dd></div>
+        </dl>
+      </section>
+
+      <section id="help" class="section help-section" aria-labelledby="help-title">
+        <div class="section-heading"><span class="section-number">?</span><h2 id="help-title">Troubleshooting</h2></div>
+        <div class="boundary">
+          <div><p class="eyebrow">FRAMEWORK OR PROCESS QUESTION</p><p>Ask Codex: <code>What should I do next?</code></p></div>
+          <div><p class="eyebrow">INSTALLATION OR ACCESS PROBLEM</p><p>Contact the HCM Technology team.</p></div>
+        </div>
+        <dl class="layer-help">
+          <div><dt><span class="layer-tag">VS CODE</span>I cannot find a command or extension</dt><dd>Type the command name in Command Palette exactly as shown. If nothing appears, install the extension and run <strong>Developer: Reload Window</strong>.</dd></div>
+          <div><dt><span class="layer-tag">CODEX</span>Not signed in, or no answer</dt><dd>Open the Codex panel and sign in again. Check your internet connection. Start a new chat with the <strong>+</strong> button.</dd></div>
+          <div><dt><span class="layer-tag">CODEX</span>Codex does not follow the Framework</dt><dd>Check that VS Code shows <strong>your project folder</strong> (with <code>AGENTS.md</code>), not a parent folder. Then ask <code>What should I do next?</code></dd></div>
+          <div><dt><span class="layer-tag">PYTHON</span>"No module named yaml" or similar</dt><dd>Run the package install command from step 03 again.</dd></div>
+          <div><dt><span class="layer-tag">GIT / GITHUB</span>Cannot clone, push or sign in</dt><dd>Use <strong>Git: Clone → Clone from GitHub</strong> in VS Code to sign in through the browser. If you see "404" or "permission denied", ask for access to the organization.</dd></div>
+          <div><dt><span class="layer-tag">FRAMEWORK</span>Codex runs, but I do not know what to do</dt><dd>Open <code>START-HERE.md</code> and read <strong>Your Next Action</strong>, or ask Codex <code>What should I do next?</code> Do not edit Framework files by hand.</dd></div>
+        </dl>
+        <p class="small-text links-line">Official documentation: <a href="https://code.visualstudio.com/docs" target="_blank" rel="noopener noreferrer">VS Code <span aria-hidden="true">↗</span></a> · <a href="https://developers.openai.com/codex/ide" target="_blank" rel="noopener noreferrer">Codex in VS Code <span aria-hidden="true">↗</span></a> · <a href="https://code.visualstudio.com/docs/sourcecontrol/overview" target="_blank" rel="noopener noreferrer">Git in VS Code <span aria-hidden="true">↗</span></a> · <a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template" target="_blank" rel="noopener noreferrer">GitHub templates <span aria-hidden="true">↗</span></a></p>
+      </section>
+
+      <footer class="page-footer"><span>TSP · LAC HCM Technology</span><span>Internal guide</span></footer>
+    </main>
+  </div>
+  <div id="status" class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+  <dialog id="copy-dialog" aria-labelledby="copy-dialog-title"><h2 id="copy-dialog-title">Copy your text</h2><p>Automatic copy does not work in this browser. Select the text below and copy it.</p><label for="manual-copy">Text to copy</label><textarea id="manual-copy" rows="6" readonly></textarea><button type="button" class="button button-primary" id="close-copy-dialog">Done</button></dialog>
+</body>
+</html>
