@@ -290,7 +290,7 @@ python3 --version</code></pre><button type="button" class="copy-button" data-cop
 cd &lt;your-repository-name&gt;
 code .</code></pre><button type="button" class="copy-button" data-copy="clone-commands" aria-label="Copy clone and open commands">Copy</button></div></details>
             <p class="expect"><span>Expected result</span> On the left, VS Code shows your project files, including <code>START-HERE.md</code> and <code>AGENTS.md</code>.</p>
-            <p class="small-text">VS Code may ask to allow automatic tasks in this folder. These tasks open the Framework dashboard in your browser. You can allow them.</p>
+            <p>VS Code asks: <em>"This folder has tasks that run automatically. Do you allow them?"</em> Choose <strong>Allow</strong>. This task opens the <strong>Framework status page</strong> in your browser (see step 07).</p>
           </li>
         </ol>
         <details class="trouble trouble-standalone"><summary>Cannot clone or sign in to GitHub?</summary><ul><li><strong>Your repository is not in the list:</strong> check that you created it under <code>TSP-LAC-HR-DEVELOPMENTS</code>, and that you are signed in with the right GitHub account.</li><li class="os-win"><strong>The sign-in window keeps coming back:</strong> the Git sign-in helper opens a browser window. Finish the sign-in there.</li><li class="os-mac"><strong>Sign-in fails in Terminal:</strong> use <strong>Git: Clone → Clone from GitHub</strong> in VS Code. It signs you in through the browser.</li></ul></details>
@@ -304,7 +304,16 @@ code .</code></pre><button type="button" class="copy-button" data-copy="clone-co
         <p class="start-handover"><strong>From here, the Framework guides you.</strong> You do not need to know which step comes next, which files to open or what to edit.</p>
         <p>When you are not sure what to do, ask Codex:</p>
         <div class="prompt-card"><code id="next-prompt">What should I do next?</code><button type="button" class="copy-button" data-copy="next-prompt" aria-label="Copy next action prompt">Copy</button></div>
-        <p class="small-text">You can also open <code>START-HERE.md</code> at any time. Its section <strong>Your Next Action</strong> always shows who must do what.</p>
+        <div class="verify-card" id="status-page">
+          <p class="eyebrow">SEE YOUR PROJECT STATUS</p>
+          <p>The Framework has a <strong>status page</strong>: <code>FRAMEWORK-STATUS.html</code>, in the main folder of your project. It shows the project stage, the approvals and <strong>your next action</strong>. It updates by itself while you work.</p>
+          <ul class="mini-facts">
+            <li><strong>It opens alone</strong> in your browser when you open the project in VS Code, if you allowed automatic tasks.</li>
+            <li><strong>Open it yourself:</strong> Command Palette → <strong>Tasks: Run Task</strong> → <strong>Framework: Live Dashboard</strong>.</li>
+            <li><strong>Or</strong> in the VS Code file list, right-click <code>FRAMEWORK-STATUS.html</code> → <strong class="os-win">Reveal in File Explorer</strong><strong class="os-mac">Reveal in Finder</strong>, then double-click the file.</li>
+          </ul>
+          <p class="small-text">Keep it open in a browser tab. You can also open <code>START-HERE.md</code> in VS Code: the section <strong>Your Next Action</strong> shows the same next step.</p>
+        </div>
 
         <div class="known-facts">
           <p class="eyebrow">HAVE THIS INFORMATION READY</p>
@@ -417,6 +426,7 @@ code .</code></pre><button type="button" class="copy-button" data-copy="clone-co
           <div><dt><span class="layer-tag">CODEX</span>Codex does not follow the Framework</dt><dd>Check that VS Code shows <strong>your project folder</strong> (with <code>AGENTS.md</code>), not a parent folder. Then ask <code>What should I do next?</code></dd></div>
           <div><dt><span class="layer-tag">PYTHON</span>"No module named yaml" or similar</dt><dd>Run the package install command from step 03 again.</dd></div>
           <div><dt><span class="layer-tag">GIT / GITHUB</span>Cannot clone, push or sign in</dt><dd>Use <strong>Git: Clone → Clone from GitHub</strong> in VS Code to sign in through the browser. If you see "404" or "permission denied", ask for access to the organization.</dd></div>
+          <div><dt><span class="layer-tag">FRAMEWORK</span>I do not see the status page</dt><dd>Command Palette → <strong>Tasks: Run Task</strong> → <strong>Framework: Live Dashboard</strong>. If it fails, check that the Python extension is installed and the Python packages from step 03 are installed. See <a href="#status-page">step 07</a>.</dd></div>
           <div><dt><span class="layer-tag">FRAMEWORK</span>Codex runs, but I do not know what to do</dt><dd>Open <code>START-HERE.md</code> and read <strong>Your Next Action</strong>, or ask Codex <code>What should I do next?</code> Do not edit Framework files by hand.</dd></div>
         </dl>
         <p class="small-text links-line">Official documentation: <a href="https://code.visualstudio.com/docs" target="_blank" rel="noopener noreferrer">VS Code <span aria-hidden="true">↗</span></a> · <a href="https://developers.openai.com/codex/ide" target="_blank" rel="noopener noreferrer">Codex in VS Code <span aria-hidden="true">↗</span></a> · <a href="https://code.visualstudio.com/docs/sourcecontrol/overview" target="_blank" rel="noopener noreferrer">Git in VS Code <span aria-hidden="true">↗</span></a> · <a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template" target="_blank" rel="noopener noreferrer">GitHub templates <span aria-hidden="true">↗</span></a></p>
