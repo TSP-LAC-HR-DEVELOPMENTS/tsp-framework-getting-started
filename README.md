@@ -1,5 +1,9 @@
 # TSP SAP Framework — Getting Started
 
+**Current stable release: [v0.11.0](https://github.com/TSP-LAC-HR-DEVELOPMENTS/tsp-sap-development-template/releases/tag/v0.11.0) — approved for general internal TSP use.**
+
+Official template: [TSP-LAC-HR-DEVELOPMENTS/tsp-sap-development-template](https://github.com/TSP-LAC-HR-DEVELOPMENTS/tsp-sap-development-template). Approved baseline: `fe9941059ab23db1e2344e98988e644d9884b0f8`. Framework release approval does not approve customer deliverables or imply live SAP environment acceptance.
+
 A static page that takes an SAP Integration consultant from zero to their first development with the TSP SAP Development Framework, using **VS Code**, **Codex** and the **TSP-LAC-HR-DEVELOPMENTS** GitHub organization.
 
 - **Part A — Get ready (once):** VS Code + Python extension, Git, Python 3.11+ and the Framework's packages (`PyYAML`, `openpyxl`, `python-docx`), Codex in Agent mode, GitHub organization access, ready check.
